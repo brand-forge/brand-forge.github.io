@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+10&display=swap');
+
+body {
+    background-color: #000;
+    font-style: normal;
+    color: white;
+    font-family: "Jersey 10", sans-serif;
+}
+
+.heading1 {
+    font-size: 175px;
+    color: #FFC94A;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.heading2 {
+    font-size: 75px;
+    text-align: center;
+}
+
+.para1 {
+    text-transform: lowercase;
+    text-align: center;
+    font-size: 20px;
+}
+
+.courses_box {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 50px 0;
+}
+
+.courses_item {
+    font-family: "Jersey 10", sans-serif;
+    flex: 1 1 calc(33.33333% - 30px);
+    margin: 0 15px 20px;
+    overflow: hidden;
+    border-radius: 28px;
+}
+
+.courses-item_link {
+    max-height: 400px;
+    text-decoration: none;
+    display: block;
+    padding: 30px 20px;
+    background-color: #121212;
+    overflow: hidden;
+    position: relative;
+}
+
+.courses-item_link:hover {
+    text-decoration: none;
+    color: #FFF;
+
+    .courses-item_title{
+        transition-duration: 1800ms;
+        transition-delay: 700ms;
+        min-height: 87px;
+        margin: 0 0 25px;
+        overflow: hidden;
+        font-size: 100px;
+        color: #FFF;
+        z-index: 2;
+        position: relative;
+    }
+}
+
+
+.courses-item_link:hover .courses-item_bg {
+    transform: scale(10);
+}
+
+.courses-item_title {
+    min-height: 87px;
+    margin: 0 0 25px;
+    overflow: hidden;
+    font-size: 50px;
+    color: #FFF;
+    z-index: 2;
+    position: relative;
+}
+
+.courses-item_para {
+    font-size: 18px;
+    color: #FFF;
+    margin-top: 10px;
+}
+
+.courses-item_bg {
+    height: 128px;
+    width: 128px;
+    background-color: #C70039;
+    z-index: 1;
+    position: absolute;
+    top: -75px;
+    right: -75px;
+    border-radius: 50%;
+    transition: all .5s ease;
+}
+
+.courses_item:nth-child(2n) .courses-item_bg {
+    background-color: #900C3F;
+}
+
+.courses_item:nth-child(3n) .courses-item_bg {
+    background-color: #F94C10;
+}
+
+@media only screen and (max-width: 979px) {
+    .courses_item {
+        flex: 1 1 calc(50% - 30px);
+    }
+    .courses-item_title {
+        font-size: 24px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .format-container {
+        width: 96%;
+    }
+}
+
+@media only screen and (max-width: 639px) {
+    .courses_item {
+        flex: 1 1 100%;
+    }
+    .courses-item_title {
+        min-height: 72px;
+        font-size: 24px;
+    }
+    .courses-item_link {
+        padding: 22px 40px;
+    }
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.button {
+    font-family: "Jersey 10", sans-serif;
+    font-size: 20px;
+    text-decoration: none;
+    background-color: #000;
+    color: white;
+    width: 200px;
+    height: 50px;
+    margin: 0 10px;
+}
+
+.button:hover {
+    transition: 2s ease-in;
+    background-color: #F94C10;
+}
