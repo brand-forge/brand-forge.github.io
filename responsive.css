@@ -256,6 +256,27 @@ body {
     }
 }
 
+@media only screen and (max-width: 767px) {
+    .pricing-section input[type=range] {
+        width: 90%;
+        -webkit-appearance: none; /* Safari */
+    }
+
+    .pricing-section .output {
+        font-size: 1.2em;
+    }
+}
+
+@media only screen and (max-width: 479px) {
+    .pricing-section input[type=range] {
+        width: 95%;
+    }
+
+    .pricing-section .output {
+        font-size: 1em;
+    }
+}
+
 @media only screen and (max-width: 639px) {
     .courses_item {
         flex: 1 1 100%;
