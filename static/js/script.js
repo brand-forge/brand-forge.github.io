@@ -20,11 +20,11 @@ window.addEventListener('scroll', function() {
         navbar.style.backgroundColor = 'transparent';
         setTimeout(function() {
             logoSpan.style.color = 'transparent';
-            logoSpan.style.backgroundImage = 'linear-gradient(90deg, var(--colore-middle-h4) 0%, var(--colore-middle-h3) 25%, var(--colore-middle-h2) 50%, var(--colore-middle) 75%, var(--colore-callact) 100%)';
+            logoSpan.style.backgroundImage = 'linear-gradient(90deg, rgb(109, 109, 109) 0%, var(--color-neutral-2) 100%)';
             logoImg.src = 'static/images/ex-logo.svg';
             optionsImg.src = 'static/images/options.svg';
             favicon.href = 'static/images/ex-logo.svg';
-            underlineCol.style.textDecorationColor = "var(--colore-callact)";
+            underlineCol.style.textDecorationColor = "rgb(255, 255, 255)";
         }, 520);
     }
 });
