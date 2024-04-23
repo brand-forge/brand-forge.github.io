@@ -118,7 +118,7 @@ a {
 }
 
 .navbar .options img {
-    margin-top: 0.6em;  
+    margin-top: 1em;  
 
     width: 5em;
     height: 5em;
@@ -151,7 +151,7 @@ a {
 
     display: inline-block;
 
-    font-size: 2.5rem; 
+    font-size: 2.5em; 
     text-align: center;
 }
 
@@ -161,7 +161,7 @@ a {
 
     display: inline-block;
 
-    font-size: 10rem;
+    font-size: 8.5em;
     font-style: italic;
     text-align: center;
 }
@@ -199,4 +199,137 @@ footer {
 .copyright {
     margin-top: 20px;
     font-size: 0.8rem;
+}
+
+
+@media (min-width: 992px) and (max-width: 1499.98px) {
+    .navbar .logo {
+        margin-left: 1.5em;
+    }
+
+    .navbar .options {
+        margin-left: 20em;
+        margin-right: 4em;
+    }
+
+    .opener p {
+        margin-bottom: 0em;
+        font-size: 2em;
+    }
+
+    .opener h1 {
+        margin-top: 0em;
+        font-size: 7em;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .navbar .logo {
+        margin-left: 1.5em;
+    }
+
+    .navbar .options {
+        margin-left: 10em;
+        margin-right: 3em;
+    }
+
+    .opener p {
+        margin-bottom: 0em;
+        font-size: 2em;
+    }
+
+    .opener h1 {
+        margin-top: 0em;
+        font-size: 5.5em;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .navbar .logo {
+        margin-left: 0;
+    }
+
+    .navbar .options img{
+        margin-top: 2.5em;  
+
+        width: 3em;
+        height: 3em;
+    }
+
+    .navbar .options {
+        margin-left: 5em;
+        margin-right: 3em;
+    }
+
+    .opener p {
+        margin-bottom: 0em;
+        font-size: 2em;
+    }
+
+    .opener h1 {
+        margin-top: 0em;
+        font-size: 4.5em;
+    }
+}
+
+@media (min-width: 466px) and (max-width: 575.98px) {
+    .navbar .logo {
+        margin-left: 0;
+    }
+
+    .navbar .logo span {
+        display: none;
+    }
+
+    .navbar .options img {
+        margin-top: 2.5em;  
+        width: 3em;
+        height: 3em;
+    }
+
+    .navbar .options {
+        margin-left: 1em;
+        margin-right: 4em;
+    }
+
+    .opener p {
+        margin-bottom: 0em;
+        font-size: 2em;
+    }
+
+    .opener h1 {
+        margin-top: 0em;
+        font-size: 4em;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 465.98px) {
+    .navbar .logo {
+        margin-left: 0;
+    }
+
+    .navbar .logo span {
+        display: none;
+    }
+
+    .navbar .options img {
+        margin-top: 2.5em;  
+        width: 3em;
+        height: 3em;
+    }
+
+    .navbar .options {
+        margin-left: 3em;
+        margin-right: 3em;
+    }
+
+    .opener p {
+        margin-bottom: 0em;
+        font-size: 1.5em;
+    }
+
+    .opener h1 {
+        margin-top: 0em;
+        font-size: 4.5em;
+    }
 }
