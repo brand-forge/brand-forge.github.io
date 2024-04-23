@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
 
 :root {
     --color-callact: rgb(79,11,118);
@@ -129,7 +128,7 @@ a {
 }
 
 .opener {
-    font-family: "Abril Fatface", serif;
+    font-family: "Bebas Neue", sans-serif;
 
     position: absolute;
     z-index: 1;
@@ -179,16 +178,17 @@ footer {
 }
 
 .contact-info p {
+    text-align: center;
     font-size: 1.6em;
     margin: 5px 0;
 }
 
 .contact-info p strong {
-    font-weight: bold;
+    color: var(--color-middle-h4);
 }
 
 .contact-info p a {
-    color: #007bff;
+    color: var(--color-neutral-2);
     text-decoration: none;
 }
 
