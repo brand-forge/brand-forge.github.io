@@ -17,6 +17,7 @@
 
     --color-neutral: rgb(255, 255, 255);
     --color-neutral-2: rgb(0, 0, 0);
+    --color-neutral-3: rgb(240, 240, 240); 
 }
 
 body {
@@ -40,7 +41,7 @@ a {
     justify-content: center;
     align-items: center;
     position: relative;
-    z-index: -1;
+    z-index: 1;
 }
 
 .navbar {
@@ -56,7 +57,7 @@ a {
     flex-direction: row;
     justify-content: space-between;
     padding: 20px;
-    z-index: 2;
+    z-index: 100;
 
     transition: background-color ease-in 0.5s;
 }
@@ -72,27 +73,21 @@ a {
     align-items: center;
 }
 
-.navbar .logo img {    
+/* .navbar .logo img {    
     width: 7em;
     height: 7em;
-}
+} */
 
 .navbar .logo span {
-    margin-top: 0.6em;
+    margin-top: 0.4em;
 
     font-family: "Bebas Neue", sans-serif;
-    font-size: 3em;
+    font-size: 4em;
     font-weight: bold;
     letter-spacing: 0.2em;
     white-space: nowrap;
 
-    background: linear-gradient(90deg, rgb(109, 109, 109) 0%, var(--color-neutral-2) 100%);
-    color: transparent;
-
-    -webkit-background-clip: text;
-    background-clip: text;
-
-    transition: 0.5s ease-in-out;
+    color: var(--color-neutral-2);
 }
 
 .navbar .logo:hover span {
@@ -117,7 +112,7 @@ a {
 }
 
 .navbar .options img {
-    margin-top: 1em;  
+    margin-top: 0.7em;  
 
     width: 5em;
     height: 5em;
@@ -131,7 +126,7 @@ a {
     font-family: "Bebas Neue", sans-serif;
 
     position: absolute;
-    z-index: 1;
+    z-index: 3;
 
     top: 0;
     left: 0;
@@ -167,28 +162,95 @@ a {
 
 .opener h1 u{
     text-decoration-color: rgb(255, 255, 255);
+    transition: text-decoration-color 0.7s ease-in-out;
 }
+
+.services {
+    width: 100%;
+
+    font-family: "Bebas Neue", sans-serif;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 3;
+
+    background-color: var(--color-neutral-3);
+}
+
+.services span {
+    font-size: 5em;
+    color: var(--color-middle-h4);
+
+    margin-top: 0.5em;
+}
+
+.services .cards {
+    display: flex;
+    flex-direction: row;
+}
+
+.services .cards .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 22vw;
+    height: 45vh;
+    margin: 2em 5em;
+
+    border: 0.5em solid;
+    border-color: var(--color-neutral-2);
+    border-radius: 2em;
+
+    background-color: var(--color-neutral);
+    transition: background-color 0.5s ease-in;
+}
+
+.services .cards .card:hover {
+    background-color: rgba(245, 165, 11, 0.5);
+}
+
+.services .cards .card img {
+    margin-top: 4em;
+
+    display: block;
+
+    width: 60%;
+    height: 60%;
+}
+
+.services .cards .card span {
+    color: var(--color-neutral-2);
+
+    display: inline-block;
+    font-size: 3em;
+} 
+
 
 footer {
     font-family: "Bebas Neue", sans-serif;
 
-    background-color: #f0f0f0;
+    background-color: var(--color-neutral-2);
     padding: 20px;
     text-align: center;
+
+    width: 100%;
 }
 
 .contact-info p {
+    color: var(--color-neutral);
     text-align: center;
     font-size: 1.6em;
     margin: 5px 0;
 }
 
 .contact-info p strong {
-    color: var(--color-middle-h4);
+    color: var(--color-middle-h3);
 }
 
 .contact-info p a {
-    color: var(--color-neutral-2);
+    color: var(--color-neutral);
     text-decoration: none;
 }
 
@@ -197,6 +259,7 @@ footer {
 }
 
 .copyright {
+    color: var(--color-neutral);
     margin-top: 20px;
     font-size: 0.8rem;
 }
@@ -209,7 +272,7 @@ footer {
 
     .navbar .options {
         margin-left: 20em;
-        margin-right: 4em;
+        margin-right: 6em;
     }
 
     .opener p {
@@ -221,6 +284,22 @@ footer {
         margin-top: 0em;
         font-size: 7em;
     }
+
+    .services .cards .card {
+        width: 14em;
+        height: 80%;
+        margin: 2em 2em;
+    }
+
+    .services .cards .card img {
+        width: 70%;
+        height: auto;
+    }
+
+    .services .cards .card span {
+        font-size: 2em;
+        margin-left: 0.02em;
+    }
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
@@ -230,7 +309,7 @@ footer {
 
     .navbar .options {
         margin-left: 10em;
-        margin-right: 3em;
+        margin-right: 1em;
     }
 
     .opener p {
@@ -242,18 +321,34 @@ footer {
         margin-top: 0em;
         font-size: 5.5em;
     }
+
+    /* .services .cards {
+        flex-direction: column;
+        justify-content: -around;
+        flex-wrap: wrap;
+    } */
+
+    .services .cards .card {
+        width: 12em;
+        height: 80%;
+        margin: 2em 2em;
+    }
+
+    .services .cards .card img {
+        width: 70%;
+        height: auto;
+    }
+
+    .services .cards .card span {
+        font-size: 2em;
+        margin-left: 0.02em;
+    }
 }
+
 
 @media (min-width: 576px) and (max-width: 767.98px) {
     .navbar .logo {
         margin-left: 0;
-    }
-
-    .navbar .options img{
-        margin-top: 2.5em;  
-
-        width: 3em;
-        height: 3em;
     }
 
     .navbar .options {
@@ -270,6 +365,28 @@ footer {
         margin-top: 0em;
         font-size: 4.5em;
     }
+
+    .services .cards {
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+
+    .services .cards .card {
+        width: 20em;
+        height: 80%;
+        margin: 2em 2em;
+    }
+
+    .services .cards .card img {
+        width: 70%;
+        height: auto;
+    }
+
+    .services .cards .card span {
+        font-size: 2em;
+        margin-left: 0.02em;
+    }
 }
 
 @media (min-width: 466px) and (max-width: 575.98px) {
@@ -277,15 +394,11 @@ footer {
         margin-left: 0;
     }
 
-    .navbar .logo span {
-        display: none;
-    }
-
-    .navbar .options img {
+    /* .navbar .options img {
         margin-top: 2.5em;  
         width: 3em;
         height: 3em;
-    }
+    } */
 
     .navbar .options {
         margin-left: 1em;
@@ -301,6 +414,28 @@ footer {
         margin-top: 0em;
         font-size: 4em;
     }
+
+    .services .cards {
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+
+    .services .cards .card {
+        width: 20em;
+        height: 80%;
+        margin: 2em 2em;
+    }
+
+    .services .cards .card img {
+        width: 70%;
+        height: auto;
+    }
+
+    .services .cards .card span {
+        font-size: 2em;
+        margin-left: 0.02em;
+    }
 }
 
 @media (min-width: 320px) and (max-width: 465.98px) {
@@ -308,15 +443,11 @@ footer {
         margin-left: 0;
     }
 
-    .navbar .logo span {
-        display: none;
-    }
-
-    .navbar .options img {
+    /* .navbar .options img {
         margin-top: 2.5em;  
         width: 3em;
         height: 3em;
-    }
+    } */
 
     .navbar .options {
         margin-left: 3em;
@@ -331,5 +462,27 @@ footer {
     .opener h1 {
         margin-top: 0em;
         font-size: 4.5em;
+    }
+
+    .services .cards {
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+
+    .services .cards .card {
+        width: 16em;
+        height: 80%;
+        margin: 2em 2em;
+    }
+
+    .services .cards .card img {
+        width: 70%;
+        height: auto;
+    }
+
+    .services .cards .card span {
+        font-size: 2em;
+        margin-left: 0.02em;
     }
 }
