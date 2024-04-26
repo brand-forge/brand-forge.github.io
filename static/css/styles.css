@@ -1,20 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 :root {
-    --color-callact: rgb(79,11,118);
-    --color-middle: rgb(139,45,116);
-
-    --color-middle-h2: rgb(199,73,86);
-    --color-middle-h3: rgb(234,116,52);
-    --color-middle-h4: rgb(246,165,11);
-
+    --color-callact: rgb(79, 11, 118);
+    --color-middle: rgb(139, 45, 116);
+    --color-middle-h2: rgb(199, 73, 86);
+    --color-middle-h3: rgb(234, 116, 52);
+    --color-middle-h4: rgb(246, 165, 11);
     --colore-callact: rgb(168, 233, 137);
     --colore-middle: rgb(120, 205, 139);
-
     --colore-middle-h2: rgb(63, 179, 178);
     --colore-middle-h3: rgb(29, 137, 197);
     --colore-middle-h4: rgb(19, 99, 230);
-
     --color-neutral: rgb(255, 255, 255);
     --color-neutral-2: rgb(0, 0, 0);
     --color-neutral-3: rgb(240, 240, 240); 
@@ -28,6 +24,7 @@ body {
 
 a {
     text-decoration: none;
+    display: inline-block;
 }
 
 .background-image {
@@ -36,7 +33,7 @@ a {
     background-size: cover;
     color: #eee;
     height: 100vh;
-    width: 100vw;
+    flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -46,56 +43,41 @@ a {
 
 .navbar {
     background-color: rgba(0, 0, 0, 0);
-
     position: fixed;
-
     top: 0;
     left: 0;
-    
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     padding: 20px;
     z-index: 100;
-
     transition: background-color ease-in 0.5s;
 }
 
 .navbar .logo {
     background-color: rgba(0, 0, 0, 0);
-
     margin-left: 15em;
-
     border: none;
     display: flex;
     flex-direction: row;
     align-items: center;
 }
 
-/* .navbar .logo img {    
-    width: 7em;
-    height: 7em;
-} */
-
 .navbar .logo span {
     margin-top: 0.4em;
-
     font-family: "Bebas Neue", sans-serif;
     font-size: 4em;
     font-weight: bold;
     letter-spacing: 0.2em;
     white-space: nowrap;
-
     color: var(--color-neutral-2);
 }
 
 .navbar .logo:hover span {
     cursor: pointer;
-
     background: rgb(0, 0, 0);
     color: transparent;
-
     -webkit-background-clip: text;
     background-clip: text;
 }
@@ -103,7 +85,7 @@ a {
 .navbar .options {
     background-color: rgba(0, 0, 0, 0);
     margin-right: 20em;
-
+    padding: 0;
     border: none;
     display: flex;
     flex-direction: row;
@@ -111,11 +93,16 @@ a {
     margin-left: 30em;
 }
 
+
+.navbar button {
+    display: inline-block;
+}
+
 .navbar .options img {
     margin-top: 0.7em;  
-
     width: 5em;
     height: 5em;
+    flex-shrink: 0; /* Prevent image from shrinking */
 }
 
 .navbar .options:hover {
@@ -124,27 +111,21 @@ a {
 
 .opener {
     font-family: "Bebas Neue", sans-serif;
-
     position: absolute;
     z-index: 3;
-
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    
     display: flex;
     justify-content: center;
     align-items: center;
-    
     flex-direction: column;
 }
 
 .opener p {
     color: var(--color-neutral-2);
-
     display: inline-block;
-
     font-size: 2.5em; 
     text-align: center;
 }
@@ -152,9 +133,7 @@ a {
 .opener h1 {
     margin-top: 0.1em;
     color: var(--color-neutral-2);
-
     display: inline-block;
-
     font-size: 8.5em;
     font-style: italic;
     text-align: center;
@@ -167,21 +146,17 @@ a {
 
 .services {
     width: 100%;
-
     font-family: "Bebas Neue", sans-serif;
-
     display: flex;
     flex-direction: column;
     align-items: center;
     z-index: 3;
-
     background-color: var(--color-neutral-3);
 }
 
 .services span {
     font-size: 5em;
     color: var(--color-middle-h4);
-
     margin-top: 0.5em;
 }
 
@@ -194,15 +169,12 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
-
     width: 22vw;
     height: 45vh;
     margin: 2em 5em;
-
     border: 0.5em solid;
     border-color: var(--color-neutral-2);
     border-radius: 2em;
-
     background-color: var(--color-neutral);
     transition: background-color 0.5s ease-in;
 }
@@ -213,52 +185,56 @@ a {
 
 .services .cards .card img {
     margin-top: 4em;
-
     display: block;
-
     width: 60%;
     height: 60%;
 }
 
 .services .cards .card span {
     color: var(--color-neutral-2);
-
     display: inline-block;
     font-size: 3em;
 } 
 
 
-footer {
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     font-family: "Bebas Neue", sans-serif;
-
     background-color: var(--color-neutral-2);
-    padding: 20px;
+    padding-top: 2em;
     text-align: center;
-
     width: 100%;
 }
 
-.contact-info p {
+.footer .contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer .contact-info p {
     color: var(--color-neutral);
     text-align: center;
     font-size: 1.6em;
     margin: 5px 0;
 }
 
-.contact-info p strong {
+.footer .contact-info p strong {
     color: var(--color-middle-h3);
 }
 
-.contact-info p a {
+.footer .contact-info p a {
     color: var(--color-neutral);
     text-decoration: none;
 }
 
-.contact-info p a:hover {
+.footer .contact-info p a:hover {
     text-decoration: underline;
 }
 
-.copyright {
+.footer .copyright {
     color: var(--color-neutral);
     margin-top: 20px;
     font-size: 0.8rem;
@@ -282,7 +258,7 @@ footer {
 
     .opener h1 {
         margin-top: 0em;
-        font-size: 7em;
+        font-size: 6.2em;
     }
 
     .services .cards .card {
@@ -309,7 +285,7 @@ footer {
 
     .navbar .options {
         margin-left: 10em;
-        margin-right: 1em;
+        margin-right: 6em;
     }
 
     .opener p {
@@ -319,19 +295,13 @@ footer {
 
     .opener h1 {
         margin-top: 0em;
-        font-size: 5.5em;
+        font-size: 5em;
     }
-
-    /* .services .cards {
-        flex-direction: column;
-        justify-content: -around;
-        flex-wrap: wrap;
-    } */
 
     .services .cards .card {
         width: 12em;
         height: 80%;
-        margin: 2em 2em;
+        margin: 2em 1.5em;
     }
 
     .services .cards .card img {
@@ -345,7 +315,6 @@ footer {
     }
 }
 
-
 @media (min-width: 576px) and (max-width: 767.98px) {
     .navbar .logo {
         margin-left: 0;
@@ -353,7 +322,7 @@ footer {
 
     .navbar .options {
         margin-left: 5em;
-        margin-right: 3em;
+        margin-right: 5em;
     }
 
     .opener p {
@@ -363,14 +332,13 @@ footer {
 
     .opener h1 {
         margin-top: 0em;
-        font-size: 4.5em;
+        font-size: 3.6em;
     }
 
     .services .cards {
         flex-direction: column;
         justify-content: center;
     }
-    
 
     .services .cards .card {
         width: 20em;
@@ -394,15 +362,9 @@ footer {
         margin-left: 0;
     }
 
-    /* .navbar .options img {
-        margin-top: 2.5em;  
-        width: 3em;
-        height: 3em;
-    } */
-
     .navbar .options {
         margin-left: 1em;
-        margin-right: 4em;
+        margin-right: 2em;
     }
 
     .opener p {
@@ -419,7 +381,6 @@ footer {
         flex-direction: column;
         justify-content: center;
     }
-    
 
     .services .cards .card {
         width: 20em;
@@ -439,19 +400,23 @@ footer {
 }
 
 @media (min-width: 320px) and (max-width: 465.98px) {
-    .navbar .logo {
-        margin-left: 0;
+    .navbar {
+        flex-direction: column-reverse;
+        align-items: center;
     }
 
-    /* .navbar .options img {
-        margin-top: 2.5em;  
-        width: 3em;
-        height: 3em;
-    } */
+    .navbar .logo {
+        margin: 0;
+        padding-right: 2em;
+    }
+
+    .navbar .logo span {
+        font-size: 3.5em;
+    }
 
     .navbar .options {
-        margin-left: 3em;
-        margin-right: 3em;
+        margin: 0;
+        padding-right: 2em;
     }
 
     .opener p {
@@ -461,14 +426,17 @@ footer {
 
     .opener h1 {
         margin-top: 0em;
-        font-size: 4.5em;
+        font-size: 3em;
+    }
+
+    .services span{
+        font-size: 4em;
     }
 
     .services .cards {
         flex-direction: column;
-        justify-content: center;
+        align-items: center;
     }
-    
 
     .services .cards .card {
         width: 16em;
